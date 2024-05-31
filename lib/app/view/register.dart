@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:learning_studio/app/utils/image.dart';
 import 'package:learning_studio/app/widget/custom_botton.dart';
-
+import 'package:learning_studio/app/routes/navigation_paths.dart';
 import 'package:learning_studio/app/widget/custom_placeholder.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -33,35 +34,52 @@ class RegisterScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const CustomTextField(
+            CustomTextField(
+              borderSide: BorderSide.none,
+              radius: BorderRadius.circular(5.47),
               hintText: "Email",
-              hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+              hintStyle: const TextStyle(color: Colors.grey, fontSize: 15),
               textAlign: TextAlign.start,
             ),
             const SizedBox(height: 10),
-            const CustomTextField(
+            CustomTextField(
+              borderSide: BorderSide.none,
+              radius: BorderRadius.circular(5.47),
               hintText: "Referral code",
-              hintStyle: TextStyle(color: Colors.grey, fontSize: 15),
+              hintStyle: const TextStyle(color: Colors.grey, fontSize: 15),
               textAlign: TextAlign.start,
             ),
             const SizedBox(height: 10),
-            const CustomTextField(
+            CustomTextField(
+              borderSide: BorderSide.none,
+              radius: BorderRadius.circular(5.47),
               hintText: "Set New Password",
-              hintStyle: TextStyle(color: Colors.black, fontSize: 15),
+              hintStyle: const TextStyle(color: Colors.black, fontSize: 15),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 10),
-            const CustomTextField(
+            CustomTextField(
+              borderSide: BorderSide.none,
+              radius: BorderRadius.circular(5.47),
               hintText: "Confirm New Password",
-              hintStyle: TextStyle(color: Colors.black, fontSize: 15),
+              hintStyle: const TextStyle(color: Colors.black, fontSize: 15),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             CustomButton(
               deviceSize: 150,
               colors: Colors.orange.shade900,
-              text: 'Register',
-            )
+              text: const Text(
+                'Register',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 14,
+                ),
+              ),
+              onPressed: () => context.go(n10n.nameScreen),
+              radius: BorderRadius.circular(35),
+            ),
           ],
         ),
       ),

@@ -2,29 +2,30 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
-    super.key,
+    Key? key,
+    required this.onPressed,
     required this.deviceSize,
     required this.colors,
     required this.text,
-  });
-
+    required this.radius,
+  }) : super(key: key);
+  final VoidCallback onPressed;
   final double deviceSize;
   final Color colors;
-  final String text;
+  final Text text;
+  final BorderRadius radius;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: deviceSize,
-      decoration: BoxDecoration(
-          color: Colors.orange.shade900,
-          borderRadius: BorderRadius.circular(35)),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Center(
-          child: Text(
-            text,
-            style: const TextStyle(fontSize: 14.0, color: Colors.white),
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        width: deviceSize,
+        decoration: BoxDecoration(color: colors, borderRadius: radius),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Center(
+            child: text,
           ),
         ),
       ),

@@ -55,6 +55,66 @@ class NavigationRoute {
             );
           },
         ),
+
+         GoRoute(
+          path: n10n.nameScreen,
+          name: n10n.nameScreen,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 400),
+              reverseTransitionDuration: const Duration(milliseconds: 200),
+              child: const NameScreen(),
+              transitionsBuilder: (
+                context,
+                animation,
+                secondaryAnimation,
+                child,
+              ) {
+                return FadeTransition(opacity: animation, child: child);
+              },
+            );
+          },
+        ),
+
+         GoRoute(
+          path: n10n.locationScreen,
+          name: n10n.locationScreen,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 400),
+              reverseTransitionDuration: const Duration(milliseconds: 200),
+              child: const LocationScreen(),
+              transitionsBuilder: (
+                context,
+                animation,
+                secondaryAnimation,
+                child,
+              ) {
+                return FadeTransition(opacity: animation, child: child);
+              },
+            );
+          },
+        ),
+
+         GoRoute(
+          path: n10n.startedScreen,
+          name: n10n.startedScreen,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 400),
+              reverseTransitionDuration: const Duration(milliseconds: 200),
+              child: const StartedScreen(),
+              transitionsBuilder: (
+                context,
+                animation,
+                secondaryAnimation,
+                child,
+              ) {
+                return FadeTransition(opacity: animation, child: child);
+              },
+            );
+          },
+        ),
       ],
     );
   }

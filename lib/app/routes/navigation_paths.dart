@@ -6,4 +6,10 @@ class n10n {
   static String onbording = '/onboarding';
 
   static String register = '/register';
+
+  static String nameScreen = '/nameScreen';
+
+  static String locationScreen = '/locationScreen';
+
+  static String startedScreen = '/startedScreen';
 }
