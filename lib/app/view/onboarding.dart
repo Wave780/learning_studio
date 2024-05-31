@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learning_studio/app/routes/helper.dart';
+import 'package:go_router/go_router.dart';
+import 'package:learning_studio/app/routes/navigation_paths.dart';
 
 import 'package:learning_studio/app/utils/image.dart';
 
@@ -50,8 +51,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: const Image(
                   image: AssetImage(AppAssetsImage.forwardArrow),
                 ),
-              onTap:  () => NavigationHelper.navigateTo(context, '/register'),
-              ),
+              onTap:  () => context.go(n10n.register)),
+              
             ],
           ),
         ));

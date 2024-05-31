@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:learning_studio/app/routes/routes.dart';
 import 'package:learning_studio/app/theme/app_theme.dart';
-import 'package:learning_studio/app/view/view.dart';
 
 class LearningStudio extends StatelessWidget {
-  const LearningStudio({super.key});
+  LearningStudio({super.key});
+
+  final n10nKey = GlobalKey<NavigatorState>(debugLabel: 'global_navigator');
+  late final  routeConfig = NavigationRoute(n10nKey: n10nKey).routePaths;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: "Learning Studio",
-      home: const OnboardingScreen(),
+      routerConfig: routeConfig,
       theme: lightTheme,
       debugShowCheckedModeBanner: false,
     );
