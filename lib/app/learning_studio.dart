@@ -1,27 +1,16 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:learning_studio/app/routes/routes.dart';
 import 'package:learning_studio/app/theme/app_theme.dart';
+import 'package:learning_studio/app/view/view.dart';
 
-
-class LearningStudio extends StatefulWidget {
- 
+class LearningStudio extends StatelessWidget {
   const LearningStudio({super.key});
 
   @override
-  State<LearningStudio> createState() => _LearningStudioState();
-}
-
-class _LearningStudioState extends State<LearningStudio> {
-   
-  @override
   Widget build(BuildContext context) {
-    
-    return MaterialApp.router(
+    return MaterialApp(
       title: "Learning Studio",
-      routerConfig: AppPages().routes,
-      theme: AppTheme.light,
+      home: const OnboardingScreen(),
+      theme: lightTheme,
       debugShowCheckedModeBanner: false,
     );
   }

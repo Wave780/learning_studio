@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:learning_studio/app/routes/helper.dart';
+
 import 'package:learning_studio/app/utils/image.dart';
 
 class OnboardingScreen extends StatefulWidget {
-  const OnboardingScreen({super.key});
+    
+  const OnboardingScreen({
+    super.key,
+  });
 
   @override
   State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +23,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           elevation: 0,
           backgroundColor: Colors.transparent,
         ),
-        body: Padding(
+        body:  Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +50,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: const Image(
                   image: AssetImage(AppAssetsImage.forwardArrow),
                 ),
-                onTap: () => context.go("/register"),
+              onTap:  () => NavigationHelper.navigateTo(context, '/register'),
               ),
             ],
           ),
