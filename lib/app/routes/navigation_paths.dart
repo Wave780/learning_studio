@@ -12,4 +12,6 @@ class n10n {
   static String locationScreen = '/locationScreen';
 
   static String startedScreen = '/startedScreen';
+
+  static String courseScreen = '/courseScreen';
 }

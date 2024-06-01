@@ -115,6 +115,25 @@ class NavigationRoute {
             );
           },
         ),
+        GoRoute(
+          path: n10n.courseScreen,
+          name: n10n.courseScreen,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(milliseconds: 400),
+              reverseTransitionDuration: const Duration(milliseconds: 200),
+              child: const CourseScreen(),
+              transitionsBuilder: (
+                context,
+                animation,
+                secondaryAnimation,
+                child,
+              ) {
+                return FadeTransition(opacity: animation, child: child);
+              },
+            );
+          },
+        ),
       ],
     );
   }

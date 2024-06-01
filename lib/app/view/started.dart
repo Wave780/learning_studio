@@ -23,7 +23,7 @@ class StartedScreen extends StatelessWidget {
                 height: 220,
               ),
               CustomButton(
-                onPressed: () => context.go(n10n.onbording),
+                onPressed: () => context.go(n10n.courseScreen),
                 deviceSize: 200,
                 colors: Colors.black,
                 text: const Text(

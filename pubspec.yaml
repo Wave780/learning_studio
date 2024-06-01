@@ -28,12 +28,14 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  appinio_video_player: ^1.2.2
   cupertino_icons: ^1.0.6
   flex_color_scheme: ^7.3.1
   flutter:
     sdk: flutter
   go_router: ^14.1.4
   google_fonts: ^6.2.1
+  video_player: ^2.6.0
 
 dev_dependencies:
   flutter_lints: ^3.0.0
@@ -53,6 +55,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/video/videoplayback.mp4
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
   # For details regarding adding assets from package dependencies, see

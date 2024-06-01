@@ -40,7 +40,7 @@ class CustomHeader extends StatelessWidget {
             ],
           ),
           SizedBox(
-            width: 50,
+            width: 70,
           ),
           Image(
             image: AssetImage(AppAssetsImage.optionIcon),
