@@ -22,7 +22,7 @@ class VideoListBuilder extends StatelessWidget {
       itemBuilder: (context, index) {
         final videoItem = videoList[index];
         return ListTile(
-          trailing: CustomTrailingWidget(context, index),
+          trailing: customTrailingWidget(context, index),
           leading: Text(videoItem.number),
           title: Text(videoItem.name,
               style: TextStyle(
@@ -36,7 +36,7 @@ class VideoListBuilder extends StatelessWidget {
     );
   }
 
-  CustomTrailingWidget(context, index) {
+  customTrailingWidget(context, index) {
     if (index == 0) {
       return const Image(image: AssetImage(AppAssetsImage.tickIcon));
     } else if (index == videos.length - 1) {

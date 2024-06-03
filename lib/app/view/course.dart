@@ -1,6 +1,5 @@
 import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:learning_studio/app/utils/image.dart';
 import 'package:learning_studio/app/view/video_info.dart';
 import 'package:learning_studio/model/video.dart';
 
@@ -52,7 +51,7 @@ class _CourseScreenState extends State<CourseScreen> {
       ),
     );
   }
-
+// Function for the video player
   void initalizeVideoPlayer() {
     CachedVideoPlayerController videoPlayerController;
     videoPlayerController = CachedVideoPlayerController.asset(videoSource)
