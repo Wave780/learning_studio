@@ -55,8 +55,7 @@ class NavigationRoute {
             );
           },
         ),
-
-         GoRoute(
+        GoRoute(
           path: n10n.nameScreen,
           name: n10n.nameScreen,
           pageBuilder: (context, state) {
@@ -75,8 +74,7 @@ class NavigationRoute {
             );
           },
         ),
-
-         GoRoute(
+        GoRoute(
           path: n10n.locationScreen,
           name: n10n.locationScreen,
           pageBuilder: (context, state) {
@@ -95,8 +93,7 @@ class NavigationRoute {
             );
           },
         ),
-
-         GoRoute(
+        GoRoute(
           path: n10n.startedScreen,
           name: n10n.startedScreen,
           pageBuilder: (context, state) {
